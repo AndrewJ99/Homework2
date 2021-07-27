@@ -1,0 +1,25 @@
+﻿@model List<Vaccine>
+
+    <p>
+        <a asp-area="" asp-controller="Vaccines" asp-action="Add">New Vaccine</a> | 
+        <a asp-area="" asp-controller="Vaccines" asp-action="Dose">New Doses</a>
+    </p><br />
+<table class="table">
+    <thread>
+        <tr><th>VaccineName</th><th>Doses Required</th><th>Days Between Doses</th><th>Total Doses Received</th><th>Total Doses Left</th><th></th></tr>
+    </thread>
+    <tbody>
+        @foreach (var vaccine in Model)
+        {
+        <tr>
+            <td>@vaccine.VaccineName</td>
+            <td>@vaccine.dosesRequired</td>
+            <td>@vaccine.daysBetweenDoses</td>
+            <td>@vaccine.totalDoses</td>
+            <td>@vaccine.totalDoses</td>
+            <td><a asp-area="" asp-controller="Vaccines" asp-action="details" asp-route-id="@vaccine.Id">Edit</a></td>
+
+        </tr>
+        }
+    </tbody>
+</table>

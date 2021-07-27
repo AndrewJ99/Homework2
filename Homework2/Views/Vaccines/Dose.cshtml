@@ -1,0 +1,27 @@
+﻿@model List<Vaccine>
+
+<h5>Hey</h5>
+<form method="post">
+    <table class="table">
+        <tr>
+            <td>Vaccine </td>
+            <td>
+                <select name="VaccineName">
+                @foreach (var vaccine in Model) 
+                { 
+                    <option>@vaccine.VaccineName</option>
+                }
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>New Doses Recieved: </td>
+            <td><input type="text" name="totalDoses"/></td>
+        </tr>
+
+        <tr>
+            <td><button type="submit">Add Doses</button></td>
+        </tr>
+    </table>
+</form>

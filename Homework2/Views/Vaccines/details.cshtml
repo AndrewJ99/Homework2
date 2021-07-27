@@ -1,0 +1,35 @@
+﻿@model Vaccine
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        padding: 5px
+    }
+
+    table {
+        border-spacing 5px;
+    }
+</style>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>Vaccine Name </td>
+            <td><input type="text" name="VaccineName" value="@Model.VaccineName"/></td>
+        </tr>
+
+        <tr>
+            <td>Doses Required: </td>
+            <td><select name="dosesRequired"><option value="1">@Model.dosesRequired</option></select></td>
+        </tr>
+
+        <tr>
+            <td>Days Between Doses: </td>
+            <td><input type="text" name="daysBetweenDoses" value="@Model.daysBetweenDoses"/></td>
+        </tr>
+
+        <tr>
+            <td><button type="submit">Update</button></td>
+        </tr>
+    </table>
+</form>

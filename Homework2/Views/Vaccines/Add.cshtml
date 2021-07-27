@@ -1,0 +1,33 @@
+﻿<style>
+    table, th, td {
+        border: 1px solid black;
+        padding: 5px
+    }
+
+    table {
+        border-spacing 5px;
+    }
+</style>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>Vaccine Name: </td>
+            <td><input type="text" name="VaccineName" /></td>
+        </tr>
+
+        <tr>
+            <td>Doses Required: </td>
+            <td><select name="dosesRequired"><option value="1">1</option><option value="2">2</option></select></td>
+        </tr>
+
+        <tr>
+            <td>Days Between Doses: </td>
+            <td><input type="text" name="daysBetweenDoses" /></td>
+        </tr>
+
+        <tr>
+            <td><button type="submit">Add</button></td>
+        </tr>
+    </table>
+</form>
